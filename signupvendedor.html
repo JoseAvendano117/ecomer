@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./singup.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>TechStore</title>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card custom-shadow">
+            <div class="card-body"> 
+              <h2 class="card-title text-center mb-4">Registro de Vendedor</h2>
+              <form id="formVendedor">
+                <div class="mb-3">
+                  <label for="nameSeller" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nameSeller"
+                    required    
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phoneSeller" class="form-label">Celular</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phoneSeller"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="emailSeller" class="form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailSeller"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="passwordSeller" class="form-label"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwordSeller"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="rucVendedor" class="form-label">RUC / NIT</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="rucVendedor"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                  Registrarse como Vendedor
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./auth.js"></script>
+  </body>
+</html>

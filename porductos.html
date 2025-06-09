@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Panel de Vendedor</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Gestión de Productos</h2>
+
+      <!-- Formulario para agregar productos -->
+      <div class="card p-4 mb-4">
+        <h3 class="mb-3">Agregar nuevo producto</h3>
+        <form id="formProduct">
+          <div class="mb-3">
+            <label for="productName" class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" id="productName" required />
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="productPrice" required />
+          </div>
+          <div class="mb-3">
+            <label for="productStock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="productStock" required />
+          </div>
+          <div class="mb-3">
+            <label for="productCategory" class="form-label">Categoría</label>
+            <input type="text" class="form-control" id="productCategory" required />
+          </div>
+          <input type="hidden" id="sellerId" />
+          <button type="submit" class="btn btn-primary w-100">Agregar Producto</button>
+        </form>
+      </div>
+
+      <!-- Lista de productos -->
+      <div class="card p-4">
+        <h3 class="mb-3">Tus productos</h3>
+        <ul id="productList" class="list-group"></ul>
+      </div>
+    </div>
+
+    <script>
+      // Obtener sellerId de la sesión almacenada
+      document.addEventListener("DOMContentLoaded", async () => {
+        const sellerId = localStorage.getItem("sellerId");
+        document.getElementById("sellerId").value = sellerId;
+        cargarProductos(sellerId);
+      });
+
+      // Función para agregar un producto
+      document.getElementById("formProduct").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const product = {
+          id: Math.floor(Math.random() * 10000),  // ID temporal
+          name: document.getElementById("productName").value,
+          price: parseFloat(document.getElementById("productPrice").value),
+          stock: parseInt(document.getElementById("productStock").value, 10),
+          category: document.getElementById("productCategory").value,
+          seller_id: parseInt(document.getElementById("sellerId").value, 10) // ID vendedor
+        };
+
+        console.log("Producto a enviar:", product); // Debugging
+
+        const response = await fetch("http://127.0.0.1:8000/products", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(product)
+        });
+
+        const data = await response.json();
+        if (data.status === "ok") {
+          alert("Producto agregado exitosamente");
+          cargarProductos(product.seller_id); // Actualizar lista
+        } else {
+          alert("Error al agregar el producto");
+        }
+      });
+
+      // Función para cargar productos del vendedor
+      async function cargarProductos(sellerId) {
+        const response = await fetch(`http://127.0.0.1:8000/products?seller_id=${sellerId}`);
+        const data = await response.json();
+
+        const productList = document.getElementById("productList");
+        productList.innerHTML = ""; // Limpiar lista
+
+        data.forEach(product => {
+          const item = document.createElement("li");
+          item.className = "list-group-item";
+          item.textContent = `${product.name} - $${product.price} (Stock: ${product.stock})`;
+          productList.appendChild(item);
+        });
+      }
+    </script>
+  </body>
+</html>

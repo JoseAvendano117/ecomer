@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container-fluid">
+    <div class="row mt-3">
+        <!-- Sidebar -->
+        <aside class="col-md-2 mb-3">
+            <div class="bg-light border rounded p-3 h-100 sidebar-categorias">
+                <h5 class="font-weight-bold">Categorías</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Todos los productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#tecnologia-submenu" aria-expanded="false" aria-controls="tecnologia-submenu">
+                            Tecnología <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse pl-3" id="tecnologia-submenu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./celulares.html">Celulares</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pc.html">PC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./auriculares.html">Auriculares</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            </aside>
+            <!-- Main content -->
+            <main class="col-md-10">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h1 class="display-4 font-weight-bold titulo-principal">Bienvenido a Nuestra Tienda Online</h1>
+                        <p class="lead subtitulo-principal">Descubre productos increíbles y disfruta de una experiencia de compra única.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Producto 1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">WorkMate Z14</h2>
+                                <img src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="mouse" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Laptop delgada y potente, ideal para productividad, videollamadas y multitarea.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$999</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">NovaBook Pro 15</h2>
+                                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laptop" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Laptop ultradelgada, pantalla Full HD y rendimiento profesional. Perfecta para trabajo, estudio o diseño.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$1.099</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">PowerDesk Core i9</h2>
+                                <img src="https://images.unsplash.com/photo-1566647387313-9fda80664848?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29tcHV0YWRvcmFzfGVufDB8fDB8fHww" alt="keyboard" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">PC de escritorio de alto rendimiento, ideal para diseño, gaming o trabajo intensivo</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$1.299</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Producto 4 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">DeskSet Pro</h2>
+                                <img src="https://img.freepik.com/foto-gratis/lugar-trabajo-teclado-cerca-monitor-gafas-raton-computadora_23-2148040509.jpg?ga=GA1.1.1902327433.1747256333&semt=ais_items_boosted&w=740" alt="Auriculares Bluetooth" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Auriculares inalámbricos con sonido envolvente y cancelación de ruido activa. </p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$849</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">HomeOffice Set Minimal</h2>
+                                <img src="https://img.freepik.com/foto-gratis/escritorio-computadora-taza-boligrafos-lapices-contra-pared-blanca_181624-46591.jpg?semt=ais_items_boosted&w=740" alt="Smartwatch y Earbuds" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Estación de trabajo minimalista con PC, ideal para estudio o teletrabajo con estilo limpio.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$749</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 6 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-30">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">StudyDesk Explorer</h2>
+                                <img src="https://img.freepik.com/foto-gratis/despertador-globo-cerca-computadora-papeleria_23-2147929575.jpg?semt=ais_items_boosted&w=740" alt="Impresora" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Estación de estudio inspiradora con PC, ideal para estudiantes curiosos y creativos.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$699</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+  <div class="pagination">
+      <a href="#">«</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">»</a>
+    </div>
+  </div>
+
+        <footer class="bg-light text-center text-lg-start mt-4 py-3 footer-ecommerce">
+            <div class="text-center">
+                © 2025 Ecommerce:
+                <a class="text-dark" href="#">ecommerce.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Agrega antes de </body> si no lo tienes -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+        // Modo oscuro
+        const toggleBtn = document.getElementById('toggle-dark');
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+    <script src="./navbar.js" defer></script>
+</body>
+</html>

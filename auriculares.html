@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container-fluid">
+    <div class="row mt-3">
+        <!-- Sidebar -->
+        <aside class="col-md-2 mb-3">
+            <div class="bg-light border rounded p-3 h-100 sidebar-categorias">
+                <h5 class="font-weight-bold">Categorías</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Todos los productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#tecnologia-submenu" aria-expanded="false" aria-controls="tecnologia-submenu">
+                            Tecnología <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse pl-3" id="tecnologia-submenu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./celulares.html">Celulares</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pc.html">PC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./auriculares.html">Auriculares</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            </aside>
+            <!-- Main content -->
+            <main class="col-md-10">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h1 class="display-4 font-weight-bold titulo-principal">Bienvenido a Nuestra Tienda Online</h1>
+                        <p class="lead subtitulo-principal">Descubre productos increíbles y disfruta de una experiencia de compra única.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Producto 1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">AirBeats Pro</h2>
+                                <img src="https://img.freepik.com/psd-gratis/auriculares-levitantes-bodegon_23-2150806982.jpg?semt=ais_items_boosted&w=740" alt="mouse" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Mouse ergonómico con alta precisión (1000 DPI). Ideal para trabajo y estudio diario.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$129</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">SoundWave Wireless</h2>
+                                <img src="https://img.freepik.com/foto-gratis/grabacion-estereo-inalambrico-icono-humana_1232-3551.jpg?semt=ais_items_boosted&w=740" alt="Laptop" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Laptop ultradelgada, pantalla Full HD y rendimiento profesional.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$89</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">EliteSound X1</h2>
+                                <img src="https://img.freepik.com/psd-premium/maqueta-auriculares_674229-380.jpg?ga=GA1.1.1902327433.1747256333&semt=ais_items_boosted&w=740" alt="keyboard" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Teclado mecánico con retroiluminación RGB y switches de alta precisión.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$199</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Producto 4 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">SoundMax Pro Auriculares Bluetooth</h2>
+                                <img src="https://img.freepik.com/foto-gratis/auriculares-audio-escuchar_1203-7566.jpg?ga=GA1.1.1902327433.1747256333&semt=ais_items_boosted&w=740" alt="Auriculares Bluetooth" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Auriculares inalámbricos con sonido envolvente y cancelación de ruido activa. </p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$129.99</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-0">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">RedLine Wired</h2>
+                                <img src="https://img.freepik.com/foto-gratis/disparo-vertical-auriculares-blancos-cable-rojo_181624-21151.jpg?ga=GA1.1.1902327433.1747256333&semt=ais_items_boosted&w=740" alt="Smartwatch y Earbuds" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Auriculares con cable, diseño vibrante y sonido claro para uso diario.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$39</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 6 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                        <div class="card mb-4 flex-fill shadow-lg border-30">
+                            <div class="card-body text-center">
+                                <h2 class="card-title h5 font-weight-bold text-primary">FreePods TWS</h2>
+                                <img src="https://img.freepik.com/psd-gratis/icono-auriculares-tws-inalambricos-ilustracion-procesamiento-3d-aislado_439185-12856.jpg?ga=GA1.1.1902327433.1747256333&semt=ais_items_boosted&w=740" alt="Impresora" class="img-fluid rounded mb-3" style="max-height:160px;object-fit:cover;">
+                                <p class="card-text text-muted mb-2">Auriculares inalámbricos TWS con sonido nítido y conexión estable para libertad total.</p>
+                                <p class="card-text mb-3"><span class="precio-destacado">$149.99</span></p>
+                                <button class="btn btn-outline-primary btn-block font-weight-bold mb-2"><i class="fas fa-shopping-cart mr-2"></i>Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+  <div class="pagination">
+      <a href="#">«</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">»</a>
+    </div>
+  </div>
+
+        <footer class="bg-light text-center text-lg-start mt-4 py-3 footer-ecommerce">
+            <div class="text-center">
+                © 2025 Ecommerce:
+                <a class="text-dark" href="#">ecommerce.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Agrega antes de </body> si no lo tienes -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+        // Modo oscuro
+        const toggleBtn = document.getElementById('toggle-dark');
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+    <script src="./navbar.js" defer></script>
+</body>
+</html>
